@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 //actions task
 import tasks from './tasks';
-import dialog from './dialog';
+import modal from './modal';
 const AllReducers = combineReducers({
     tasks:tasks,
-    dialog:dialog
+    modal:modal
 
 });
 

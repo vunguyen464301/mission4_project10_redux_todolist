@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.css';
-
+import ModalEditTask from '../containers/ModalEditTask'
 import AddTask from './AddTask';
 import ListTask from '../containers/ListTask';
 function App() {
@@ -10,6 +9,7 @@ function App() {
      <h3>ToDo List</h3>
      <AddTask/>
      <ListTask/>
+     <ModalEditTask/>
    </div>
   );
 }

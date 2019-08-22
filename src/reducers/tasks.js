@@ -7,16 +7,15 @@ const tasks = (state = {}, action) => {
             [action.id]: (state,action)
         };
       case REMOVE_TASK:
-            const {...rest} = state;
+            const rest = {...state} ;
             delete rest[action.id];
             return rest;
     case EDIT_TASK:
-        // const {...rest}=state;
-        // arrtam =rest[action.id];
-
-        // delete rest[action.id];
-        // return rest;    
-            default:
+            return {
+                ...state,
+                [action.id]: (state,action)
+             };
+        default:
         return state;
     }
   };

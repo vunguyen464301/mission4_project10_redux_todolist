@@ -35,8 +35,3 @@ export default connect(undefined,mapDispatchToProps)(AddTask);;
 // function mapDispatchToProps(dispatch) {
 //     return bindActionCreators({ add_task: add_task }, dispatch);
 // }
-{/* <div className="center">
-<input className="form-control mr-2" type="search" placeholder="New Task" ref="getTask" />
-<button className="btn btn-outline-success my-2 my-sm-0" type="submit"
-    onClick={() => { console.log(this.refs.getTask.value) }}>Add</button>
-</div> */}

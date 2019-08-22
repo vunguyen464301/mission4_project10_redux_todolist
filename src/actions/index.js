@@ -1,6 +1,6 @@
 import {v4 as generateId} from 'node-uuid';
 
-import {ADD_TASK,REMOVE_TASK,EDIT_TASK,OPEN_DIALOG,CLOSE_DIALOG} from './actionTypes';
+import {ADD_TASK,REMOVE_TASK,EDIT_TASK, OPEN_MODAL, CLOSE_MODAL} from './actionTypes';
 
 export const add_task=(name)=>{
     console.log(`You add ${name}`);
@@ -24,16 +24,23 @@ export const edit_task=(id,name)=>{
         type:EDIT_TASK,
         id:id,
         name:name
-
     }
 }
-
-export const openDialog = () => ({
-    type: OPEN_DIALOG
-  });
+  export const openModal = (id,name) => {
+      console.log(`You click ${OPEN_MODAL}`);
+      return{
+        type: OPEN_MODAL,
+        id:id,
+        name:name
+      }
+  };
   
-  export const closeDialog = () => ({
-    type: CLOSE_DIALOG
-  });
-  
+  export const closeModal = (id,name) =>{
+      console.log(`You click ${CLOSE_MODAL}`);
+      return{
+        type: CLOSE_MODAL,
+        id:id,
+        name:name
+      }
+  };
   
